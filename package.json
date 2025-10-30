@@ -11,6 +11,7 @@
     "@cucumber/cucumber": "^12.2.0",
     "@playwright/test": "^1.56.0",
     "@types/node": "^24.9.2",
+    "allure-playwright": "^3.4.2",
     "ts-node": "^10.9.2"
   }
 }
