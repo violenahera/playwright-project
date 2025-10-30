@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {
+      "name": "PrestaShop-8b7fad49601d187407a83c016ba6a3cc",
+      "value": "def5020013d7c671988b536bba413266899c6e954f9e25267d6dcef9833d1539755087d57c7a8e30069409764cf4b56b6a13078df3f1b013403e3ad8a38f7e7d0b85d7230b5432e24d4322c0b8834c86858c19666c9f89154a6d98d34f5c6b7679c9568d70bec8d6d2c638d665a0b3102e3ee34adc270b74900de3d69cb7c8fb1114d8b4de738e00e02d06f44a942f6b4c4fcaed006e211e36915d25fff2a09f049a56cca9060b140d0f970eba84ac996a1faa128ffffc7c02799c2325f4ec59cb1d7a49b5e4ef6621b3e4825fc6ebe058975a283a5402f6f01901ea3eee1f45163345ce491d0315c0c88d2fbb534b9751ab6f4ad2cceb131b09f552f3839901a5397ca96dcbb41171d268417a5731e2c3c5b35a9f2ab1288332f94ed366949bcd18da9809f293a492849ba2f15f4d3f7bd129fd289a6182c7c112eb96e6bc333a471f1783bcefeca3f756e655096c0a3b4db51a824a39130bc2b80e44f87dae45a13c187eb624d36fa33e7dff69c205b456ffddafd7c199435d1f18889be6de24402a582f2373e51f11991b402444c1649d6d2543a69f9bcea97278d456fbf4d7f15a02e0263776c85f87fa6fd79eed923619335d274e4e0ba01367e627c47fd92baf8021a626a2f5ef4f1233df9c70663a6de223a1",
+      "domain": ".www.testingyes.com",
+      "path": "/onlineshop/",
+      "expires": 1763069549.937332,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "PHPSESSID",
+      "value": "342b3183afac8f99a5bb669d2b0699ac",
+      "domain": "www.testingyes.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}
