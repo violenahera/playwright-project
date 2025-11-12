@@ -31,7 +31,7 @@ export default defineConfig({
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    headless: false,
+    headless: true,
     viewport: { width: 1280, height: 720 },
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
