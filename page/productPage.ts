@@ -1,5 +1,6 @@
 import { Page, Locator, expect } from "@playwright/test";
 import { CartPage } from "./cartPage";
+import { ProductVariant } from "../type/productVariant";
 export class ProductPage {
     private readonly page: Page;
     private readonly product: String;
@@ -9,6 +10,7 @@ export class ProductPage {
     private readonly quantityControl: Locator;
     private readonly addToCartButton: Locator;
     private readonly checkOutButton: Locator;
+   
 
     constructor(page: Page, product: String) {
         this.page = page;
@@ -19,19 +21,21 @@ export class ProductPage {
         this.sizeControl = this.page.locator('#group_1');
         this.addToCartButton = this.page.getByRole('button', { name: ' ADD TO CART' });
         this.checkOutButton = this.page.getByText('PROCEED TO CHECKOUT');
-
+       
 
     }
 
-    async addToCar(color:string, size: string) {
-        expect((await this.actualProduct.innerText()).toLocaleLowerCase()).toEqual(this.product.toLocaleLowerCase());
-        await this.sizeControl.selectOption({ label: size });
-             if (await this.colorControl.isVisible()) {
-                 this.colorControl = this.page.getByRole('radio',{ name: color});
-                 await this.colorControl.setChecked(true);
+    async addToCar(product:ProductVariant) {
+        expect((await this.actualProduct.innerText()).toLocaleLowerCase()).toEqual(product.name.toLocaleLowerCase());
+        if (product.color!='' && await this.colorControl.isVisible()) {
+                 this.colorControl = this.page.getByRole('radio',{ name: product.color});
+                 await this.colorControl.setChecked(true);                 
               
         }
-        await this.quantityControl.fill('2');
+        if (product.size!='' && await this.sizeControl.isVisible()) 
+                  await this.sizeControl.selectOption({ label: product.size });
+                 
+        await this.quantityControl.fill(product.quantity);
         await this.addToCartButton.click();
              
        if (await this.addToCartButton.isEnabled()){
